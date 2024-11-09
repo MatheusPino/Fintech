@@ -1,5 +1,5 @@
 <%@ page import="java.sql.Connection, java.sql.Statement, java.sql.ResultSet" %>
-<%@ page import="src.main.app.ConnectionFactory" %>
+<%@ page import="factory.ConnectionFactory" %>
 <html>
 <head>
     <title>Teste de Conexão Oracle</title>
@@ -11,7 +11,7 @@
         Statement statement = null;
         ResultSet resultSet = null;
         try {
-            connection = ConnectionFactory.getConnection();
+            connection = ConnectionFactory.getOracleConnection();
             if (connection != null) {
                 out.println("<p>Conexão estabelecida com sucesso!</p>");
 
